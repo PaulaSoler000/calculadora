@@ -103,9 +103,7 @@ else {
      cifra="";
       }
 
-
 }
-
 
 function total(){                 // funcion es llamada al apretar el boton igual "="
 
