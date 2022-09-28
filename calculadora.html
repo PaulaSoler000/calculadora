@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="js/app.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="estilo/style.css" />
     <title>Calculadora</title>
 
     <!--boostrap-->
@@ -15,50 +15,36 @@
   </head>
 
   <body>
-    <div class="container my-4">  
-      <form class="calculator">
-         <table>
-            <tr>
-                <td>
-                   <input type="text" id="resultado" >
-                </td>
-            </tr>
+
+    <div class="tabla calculator"> 
+    
+                   <input class="pantalla" type="text" id="pantalla" >
+             
             <div class="calculator-keys">
-            <tr>
-                <td>
-                    <button type="button" value="7" id="num7" class="btn btn-light wave-effect">7</button>
-                   <input type="button" id="num7" value="7">
-                   <input type="button" id="num8" value="8">
-                   <input type="button" id="num9" value="9">
-                   <input type="button" id="sum" value="+">
+            
 
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <input type="button" id="num4" value="4">
-                   <input type="button" id="num5" value="5">
-                   <input type="button" id="num6"value="6">
-                   <input type="button" id="rest"value="-">
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <input type="button" id="ce" value="CE">
-                   <input type="button" id="num0" value="0">
-                   <input type="button" id="igual" value="=">
-                   <input type="button" id="divi" value="/">
-                </td>
-            </tr>
+                  <button type="button" value="7" class="btn btn-light" onclick="display_num(7)">7</button>
+                  <button type="button" value="8" class="btn btn-light"  onclick="display_num(8)">8</button>
+                  <button type="button" value="9" class="btn btn-light" onclick="display_num(9)">9</button>
+                  <button type="button" class="operator btn btn-info" value="+" onclick="operador()">+</button>
+             
+                  <button type="button" value="4" class="btn btn-light" onclick="display_num(4)">4</button>
+                  <button type="button" value="5" class="btn btn-light" onclick="display_num(5)">5</button>
+                  <button type="button" value="6" class="btn btn-light" onclick="display_num(6)">6</button> 
+                  <button type="button" class="operator btn btn-info" value="-" onclick="operador()">-</button>
+            
+                  
+                  <button type="button" value="1" class="btn btn-light" onclick="display_num(1)">1</button>
+                  <button type="button" value="2" class="btn btn-light" onclick="display_num(2)">2</button>
+                  <button type="button" value="3" class="btn btn-light" onclick="display_num(3)">3</button> 
+                  <button type="button" class="operator btn btn-info" value="*" onclick="operador()">x</button>
+          
+                  <button type="button" value="0" class="btn btn-light" onclick="display_num(0)">0</button>
+                  <button type="button" value="/" class="btn btn-light" onclick="operador()">/</button>
+                  <button type="button" class="btn btn-success" value="CE">CE</button>
+                  <button type="button" class="btn btn-warning" value="=" onclick="total()">=</button>
             </div>
-         </table>
-
-      </form>
- 
-   
-    </div>
+     </div>
   </body>
 
 </html>
