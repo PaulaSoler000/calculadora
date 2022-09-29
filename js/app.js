@@ -58,6 +58,7 @@ function resultado(){
 
 var cifra="";
 var num1 =0;
+var num2;
 var operant=0;
 
 function display_num(numero){           // funcion es llamada cuando ingresan numeros
@@ -71,15 +72,16 @@ cifra=resultado;
 
 function operador(simbolo){         //funcion es llamada cuando ingresan un operador (+,-,*,/)
 
-if (operant==0){                         // evalua si es la primera vez que ingresas un simbolo
+  console.log("simbolo: "+simbolo);
+  if (operant==0){                         // evalua si es la primera vez que ingresas un simbolo
 
-  num1 =  parseInt(document.getElementById("pantalla").value);
-  operant = simbolo;
-  cifra="";
+    num1 =  parseInt(document.getElementById("pantalla").value);  //parseInt para que detecte que son números
+    operant = simbolo;
+    cifra="";
 
-} 
-else {
-      var num2 = parseInt(document.getElementById("pantalla").value);
+  } 
+  else {
+      num2 = parseInt(document.getElementById("pantalla").value);
       if (operant=="+") {
 
         num1=num1+num2;
@@ -107,10 +109,11 @@ else {
 
 function total(){                 // funcion es llamada al apretar el boton igual "="
 
-  var num2 = parseInt(document.getElementById("pantalla").value);
+  num2 = parseInt(document.getElementById("pantalla").value);
   if (operant=="+") {
-
+    console.log('num1:' + num1 + ' num2:' + num2); 
     num1=num1+num2;
+
 
   } else if (operant=="-") {
 
