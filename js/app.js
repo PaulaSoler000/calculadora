@@ -1,61 +1,3 @@
-/* var cifra="";
-var acumular=0;
-var sumar=false;
-var restar=false;
-
-function display_num(num){
-    //acumular los numeros
-    document.getElementById("pantalla").value=cifra+num;
-
-    cifra=document.getElementById("pantalla").value;
-}
-
-function suma(){
-
-    //parseInt para que reconozca que son números
-    acumular=acumular+parseInt(cifra);
-
-    document.getElementById("pantalla").value=acumular;
-    //resetea el texto
-    cifra="";
-
-    sumar=true;
-}
-
-function resta(){
-
-    if (sumar){
-
-        acumular=acumular-parseInt(cifra);
-
-        document.getElementById("pantalla").value=acumular;
-
-    }else{
-
-    acumular=acumular-parseInt(cifra);
-
-    document.getElementById("pantalla").value=acumular;
-    }
-
-    cifra="";
-    sumar=false;
-    restar=true;
-}
-
-
-function resultado(){
-
-    if(sumar==true){
-
-        document.getElementById("pantalla").value=acumular+parseInt(cifra);
-
-        
-    }else if(restar==true){
-
-    }
-
-}*/
-
 var cifra="";
 var num1 =0;
 var num2;
@@ -79,8 +21,7 @@ function operador(simbolo){         //funcion es llamada cuando ingresan un oper
     operant = simbolo;
     cifra="";
 
-  } 
-  else {
+  } else {
       num2 = parseInt(document.getElementById("pantalla").value);
       if (operant=="+") {
 
@@ -97,14 +38,18 @@ function operador(simbolo){         //funcion es llamada cuando ingresan un oper
       } else if (operant=="/") {
 
         num1=num1/num2;
+        
       }
-    
 
      document.getElementById("pantalla").value=num1;
      operant = simbolo;
      cifra="";
       }
 
+}
+
+function reset() {
+ 
 }
 
 function total(){                 // funcion es llamada al apretar el boton igual "="
@@ -126,9 +71,18 @@ function total(){                 // funcion es llamada al apretar el boton igua
   } else if (operant=="/") {
 
     num1=num1/num2;
+
+  }else if(!opertat){
+    num1=num1;
   }
 
   document.getElementById("pantalla").value=num1;
   operant=0;
   cifra="";
+}
+
+function reset() {
+
+  num1=0;
+  num2 = parseInt(document.getElementById("pantalla").value=0);
 }
