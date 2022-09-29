@@ -82,6 +82,7 @@ function total(){                 // funcion es llamada al apretar el boton igua
 }
 
 function reset() {
-  
+
+  num1=0;
   num2 = parseInt(document.getElementById("pantalla").value=0);
 }
